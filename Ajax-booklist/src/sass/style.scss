@@ -1,0 +1,20 @@
+@import "partial/_font";
+@import "partial/_body";
+@import "partial/_mixin";
+
+$res-color: #6900FF;
+#res {
+  color: $res-color;
+}
+
+
+.btn-line-right {
+  text-align: right;
+}
+
+// #flot {
+//   foat: right;
+//   &::after{
+//     @include clearfix;
+//   }
+// }

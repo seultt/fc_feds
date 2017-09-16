@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.bundle.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <table class="table table-hover" id="mytable">
+      <thead>
+        <tr>
+          <th colspan="4">Simple Book List</th>
+          <th class="btn-line-right" colspan="1"><button class="btn btn-default" id="btn-add">+</button></th>
+        </tr>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{!--<tr>
+          <td>1</td>
+          <td>HTML5</td>
+          <td>Lee</td>
+          <td>2,000</td>
+          <td>
+            <button class="btn btn-default fa fa-pencil"></button>
+            <button class="btn btn-default fa fa-trash-o"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td>
+            <button class="btn btn-default fa fa-check-circle-o"></button>
+            <button class="btn btn-default fa fa-ban"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td>
+            <button class="btn btn-default fa fa-check-circle-o"></button>
+            <button class="btn btn-default fa fa-ban"></button>
+            <button class="btn btn-default fa fa-trash-o"></button>
+          </td>
+        </tr>--}}
+      </tbody>
+    </table>
+  </div>
+  <script src="./js/app.bundle.js"></script>
+</body>
+</html>
