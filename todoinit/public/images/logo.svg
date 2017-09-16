@@ -1,0 +1,19 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" width="88" height="41" viewBox="0 0 88 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb0e67;
+      }
+
+      .cls-2 {
+        font-size: 36px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "Yanolja Yache";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="20.5" cy="20.5" r="20.5"/>
+  <text id="Yo_것들_logo" data-name="Yo!것들_logo" class="cls-2" x="46" y="30">yo!것들</text>
+</svg>

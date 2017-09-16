@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>To Do List</title>
+  <style>
+    /** { margin: 0; padding: 0; }
+    body { font-size: 20px; }
+    li { list-style: none; }
+    
+    .wrapper {
+      width: 500px;
+      margin: 300px auto;
+    }
+    .no-text { 
+      position: absolute; 
+      visibility: hidden;
+      left: -1000px;
+      width: 1px;
+      height: 1px;
+      font-size: 1px;
+    }
+    .list-up {
+      position: relative;
+      width: 500px;
+      height: 30px;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #ddd;
+    }
+    
+    .list-up .input{ font-size: 20px; }
+    .input, .button {
+      border: none;
+      margin-right: -7px;
+      background-color: #2b303b;
+    }*/
+    
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="todo-input-group">
+      <!--label 시각장애인들을 위한 할일 작성 입력창 -->
+      <label class="no-text" for="todo-input">할일 작성</label>
+      <div class="list-up">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input class="input" id="todo-input" type="text">
+        <button class="button">추가</button>
+      </div>
+    </div>
+    <ul class="todo-list">
+
+    </ul>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

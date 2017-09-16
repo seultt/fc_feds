@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 48px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: "Yanolja Yache";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="_" data-name="+" class="cls-1" x="8.323" y="22.925"><tspan x="8.323">+</tspan></text>
+</svg>

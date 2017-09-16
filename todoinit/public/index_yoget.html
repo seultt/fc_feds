@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+  <title>yoGET</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    html, body { width: 100%; height: 100%; box-sizing: border-box; font-size: 16px;}
+    li {list-style: none; text-decoration: none;}
+    .clearfix::after {
+      display: block;
+      content: '';
+      clear: both;  
+    }
+    
+
+
+    /*.hidden {
+      display: none;
+    }*/
+
+    .wrapper {
+      width: 1176px;
+      margin: 0 auto;
+      /*border: 1px solid red;*/
+    }
+
+
+    /*---header navi---*/
+    header nav {
+      background-color: #090909;
+    }
+    /*---left---*/
+    .navigation h1.left{
+      float: left;
+    }
+    .left a.logo {
+      height: 64px;
+      margin-left: -3px;
+      line-height: 64px;
+    }
+    a.logo img { padding-bottom: 5px; vertical-align: middle; }
+
+    /*---right---*/
+    .navigation .nav-right {
+      float: right;
+      margin: 13px 0;
+    }
+    .search-box, .plus-minus-box {
+      display: inline-block;
+    }
+    .search-box {
+      position: relative;
+      width: 286px;
+      margin-right: 34px;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    .search-box .search-icon {
+      position: absolute;
+      top: 8px;
+      left: 17px;
+    }
+    .search-box input.search {
+      width: 238px;
+      height: 38px;
+      padding-left: 48px;
+      border: none;
+      border-radius: 20px;
+      background-color: #474747;
+      color: #ddd;
+      font-size: 18px;
+    }
+    .search-box input.search:hover,
+    .search-box input.search:focus,
+    .search-box input.search:active {
+      outline: none;
+    }
+
+    .plus-minus-box button {
+      width: 50px;
+      height: 38px;
+      border: none;
+      background-color: #090909;
+      font-size: 14px;
+      vertical-align: middle;
+      font-family: 'Noto Sans Korean', sans-serif;
+      font-weight: 300;
+      color: #848484;
+    }
+    .plus-minus-box button img {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    /*---header show---*/
+    section {  background-color: #fcfcfc; height: 100%; }
+    .show-form {
+        display: none;
+        height: 250px;
+        background-color: #fff;
+        box-shadow: 0 8px 10px 0 rgba(7, 0, 2, 0.05);
+    }
+
+    .wish-list {
+      padding-top: 105px;
+    }
+    .wish-list .item {
+      width: 176px;
+      height: 276px;
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 5px;
+      border: 1px solid #eee;
+      box-shadow: 0 3px 4px 0 rgba(7,0, 2, 0.05); 
+      color: #474747;
+      font-family: 'NanumSquare', sans-serif;
+    }
+    .item .item-image {
+      width: 180px;
+      height: 133px;
+      background-image: url(./images/item_list_01.png);
+    }
+    .item .item-want{
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    
+    
+
+
+
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <!--header 시작-->
+    <header>
+      <!--header top-->
+      <nav>
+        <div class="navigation wrapper clearfix">
+          <!--navigation logo-->
+          <h1 class="left"><a href="" class="logo"><img src="images/logo.svg" alt="yo것들"></a></h1>
+          <!--navigation right-->
+          <div class="nav-right">  
+            <div class="search-box">
+              <label class="search-icon" for="search"><img src="images/icon_search.svg" alt="search"></label>
+              <input class="search" type="text" placeholder="Search" id="search">
+            </div>
+            <div class="plus-minus-box">
+              <button id="plus-btn"><img src="images/icon_plus.svg">등록</button>
+              <button class="minus-btn"><img src="images/icon_minus.svg">삭제</button>
+            </div>
+          </div>
+        </div>  
+      </nav>
+      <!--header show/hidden form-->
+      <div class="show-form">
+        <div class="wrapper">
+          <h2>갖고 싶다 yo!것들</h2>
+          <div class="inner-form">
+            <label for="title">갖고싶다</label><input id="want" type="text" class="inner-want" placeholder="어떤 걸?">
+            <label for="price">가격</label><input id="price" type="text" class="inner-price" placeholder="How much?">
+            <label for="shop">파 는 곳</label><input id="shop" type="text" class="inner-shop" placeholder="On /Off-line">
+            <label for="image">이 미 지</label><input id="image" type="text" class="inner-image" placeholder="URL을 입력해주세요">
+            <p>
+              <label for="wanted">얼마만큼 갖고 싶어?</label>
+              <a href="#"><img src="images/icon_star.svg" alt="별1"></a>
+              <a href="#"><img src="images/icon_star.svg" alt="별2"></a>
+              <a href="#"><img src="images/icon_star.svg" alt="별3"></a>
+              <a href="#"><img src="images/icon_star.svg" alt="별4"></a>
+            </p>
+          </div>
+          <button class="pd-add-btn">add</button>
+          <button class="pd-cancel-btn">cancel</button>
+        </div>
+      </div>  
+    </header>
+    <!--header end-->
+    <!--wishList start-->
+    <section>
+      <ul class="wish-list wrapper clearfix">
+        <li class="item">
+          <ul>
+            <li class="item-image"></li>
+            <li class="item-want">MAC-Pro</li>
+            <li class="item-price">200만원</li>
+            <li class="item-shop">Apple 공식매장</li>
+            <li class="item-get-del"><button type="">get</button><button type="">del</button></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

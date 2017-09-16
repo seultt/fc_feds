@@ -1,0 +1,22 @@
+{
+  "toDoList": [
+    {
+      "task": "ㄴㅇㄹㄹㅇ",
+      "id": 2
+    },
+    {
+      "task": "ㄴㅇㄹㄴㅇㄹ",
+      "id": 4
+    }
+  ],
+  "yoGet": [
+    {
+      "id": 1,
+      "name": "반팔",
+      "price": "2000원",
+      "shop": "옷가게",
+      "url": "https://t1a.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/images/2016/08/29/17/6/25e64e2d-71fd-4d97-8eb8-b10d2fb16a8a.jpg",
+      "memo": "이쁘다"
+    }
+  ]
+}
