@@ -1,0 +1,14 @@
+@charset "utf-8"; /*이것 없으면 error*/
+
+body {
+  color: #181818;
+}
+
+a{
+  color: inherit; /*부모태그에 상속*/
+  text-decoration: none;
+}
+
+.info-menu{
+  background: yellow;
+}
