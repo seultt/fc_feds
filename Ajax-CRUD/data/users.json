@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "userid": "user@somewhere.com",
+      "password": "ps1000",
+      "firstname": "",
+      "lastname": ""
+    },
+    {
+      "userid": "1234",
+      "password": "1234",
+      "firstname": "김",
+      "lastname": "구구"
+    },
+    {
+      "userid": "ㄱㄱㄱㄱ",
+      "password": "ㄴㄴㄴㄴ",
+      "firstname": "힝",
+      "lastname": "힝"
+    },
+    {
+      "userid": "adl",
+      "password": "1234",
+      "firstname": "김",
+      "lastname": "후우"
+    },
+    {
+      "userid": "abcd@gamil.com",
+      "password": "1234",
+      "firstname": "",
+      "lastname": ""
+    },
+    {
+      "userid": "seult342@gmail.com",
+      "password": "123",
+      "firstname": "",
+      "lastname": ""
+    },
+    {
+      "userid": "sss12@gmail.com",
+      "password": "1234",
+      "firstname": "",
+      "lastname": ""
+    }
+  ]
+}
