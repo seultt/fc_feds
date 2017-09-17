@@ -1,8 +1,6 @@
-import square from './lib';
+import BookList from './bookList';
 
-console.log(square(3)); // 9
-
-let html = '';
-square(3) === 9 ? html = 'Webpack is working!' : html = 'Somethig wrong!';
-
-document.getElementById('res').innerHTML = html;
+(function() {
+  const bookList = new BookList();
+  bookList.init()
+}());

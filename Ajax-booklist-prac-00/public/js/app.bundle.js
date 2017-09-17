@@ -9021,21 +9021,26 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
-var _lib = __webpack_require__(328);
+var _bookList = __webpack_require__(331);
 
-var _lib2 = _interopRequireDefault(_lib);
+var _bookList2 = _interopRequireDefault(_bookList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log((0, _lib2.default)(3)); // 9
-
-var html = '';
-(0, _lib2.default)(3) === 9 ? html = 'Webpack is working!' : html = 'Somethig wrong!';
-
-document.getElementById('res').innerHTML = html;
+(function () {
+  var bookList = new _bookList2.default();
+  bookList.init();
+})();
 
 /***/ }),
-/* 328 */
+/* 328 */,
+/* 329 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9045,15 +9050,113 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-exports.default = function (x) {
-  return x * x;
-};
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Ajax = function () {
+  function Ajax() {
+    _classCallCheck(this, Ajax);
+  }
+
+  _createClass(Ajax, null, [{
+    key: 'get',
+    value: function get(url) {
+      return new Promise(function (resolve, reject) {
+        var req = new XMLHttpRequest();
+        req.open('GET', url);
+        req.send();
+
+        req.onreadystatechange = function () {
+          if (req.readyState === XMLHttpRequest.DONE) {
+            if (req.status === 200) resolve(req.response);else reject(req.statusText);
+          }
+        };
+      });
+    }
+  }]);
+
+  return Ajax;
+}();
+
+exports.default = Ajax;
 
 /***/ }),
-/* 329 */
-/***/ (function(module, exports) {
+/* 331 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ajax = __webpack_require__(330);
+
+var _ajax2 = _interopRequireDefault(_ajax);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BookList = function () {
+  function BookList() {
+    _classCallCheck(this, BookList);
+
+    this.url = '/books';
+    this.books = [];
+  }
+
+  _createClass(BookList, [{
+    key: 'bindBooksToDome',
+
+
+    // thbody in html
+    value: function bindBooksToDome() {
+      var html = this.books.map(function (_ref) {
+        var id = _ref.id,
+            title = _ref.title,
+            author = _ref.author,
+            price = _ref.price,
+            editable = _ref.editable;
+        return BookList.makeHtmlTableRow({ id: id, title: title, author: author, price: price, editable: editable });
+      }).join('');
+
+      document.querySelector('tbody').innerHTML = html;
+    }
+  }, {
+    key: 'init',
+    value: function init() {
+      var _this = this;
+
+      _ajax2.default.get(this.url).then(function (data) {
+        _this.books = JSON.parse(data);
+        _this.bindBooksToDome();
+      });
+    }
+  }], [{
+    key: 'makeHtmlTableRow',
+    value: function makeHtmlTableRow(_ref2) {
+      var id = _ref2.id,
+          title = _ref2.title,
+          author = _ref2.author,
+          price = _ref2.price,
+          editable = _ref2.editable;
+
+      var res = '';
+
+      res = '<tr>\n          <th>' + id + '</th>\n          <td>' + title + '</td>\n          <td>' + author + '</td>\n          <td>' + price + '</td>\n          <td>\n            <div class="btn-group">\n              <button type="button" class="btn btn-default">\n                <i class="fa fa-pencil" aria-hidden="true"></i>\n              </button>\n              <button type="button" class="btn btn-default">\n                <i class="fa fa-trash-o" aria-hidden="true"></i>\n              </button>\n            </div>\n          </td>\n        </tr>';
+      return res;
+    }
+  }]);
+
+  return BookList;
+}();
+
+exports.default = BookList;
 
 /***/ })
 /******/ ]);
