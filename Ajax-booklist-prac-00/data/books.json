@@ -1,0 +1,19 @@
+{
+  "books": [{
+      "id": 1,
+      "title": "CSS3",
+      "author": "Kim",
+      "price": "5000",
+      "editable": false,
+      "status": ""
+    },
+    {
+      "id": 2,
+      "title": "ajax",
+      "author": "Park",
+      "price": "10000",
+      "editable": false,
+      "status": ""
+    }
+  ]
+}
