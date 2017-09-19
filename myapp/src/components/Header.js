@@ -10,16 +10,12 @@ import React, { Component } from 'react';
 const menuItems = [
   {
     label: 'Vocablist',
-    linkTo: '/vocablist',
+    linkTo: '/mainpage',
   },
   {
-    label: 'Vocablist',
-    linkTo: '/vocablist',
+    label: 'Word Lists',
+    linkTo: '/quizes',
   },
-  {
-    label: 'Vocablist',
-    linkTo: '/vocablist',
-  }
 ];
 
 
@@ -31,7 +27,6 @@ class HeaderItem extends React.Component {
         href={this.props.linkTo}
       >
         {this.props.menuLabel}
-        {this.props.children}
       </a>
     );
   }
@@ -49,7 +44,6 @@ class Header extends React.Component {
               menuLabel={menuItem.label}
               linkTo={menuItem.linkTo}
             >
-              <div>I am your child!</div>
             </HeaderItem>
 
             )

@@ -24,7 +24,7 @@ class ListCardItem extends React.Component {
               {this.props.paragraph}
             </div>
           </div>
-          <div className="ui bottom attached button">
+          <div className="ui bottom attached button" onClick={() => window.location.pathname = '/ScoreBoard'}>
             <i className="add icon"></i>
             {this.props.add}
           </div>

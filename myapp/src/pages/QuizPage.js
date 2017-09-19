@@ -38,7 +38,6 @@ class QuizCardItem extends React.Component {
 
 class QuizPage extends React.Component {
   render = () => {
-    console.log('bb')
     return (
       <div>
         <h1>Test Yourself</h1>
